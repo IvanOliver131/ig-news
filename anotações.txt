@@ -1,0 +1,4 @@
+1 - Todos os arquivos dentro da pasta page são uma ROTA
+2 - Todos os arquivos dentro da paster page precisam de "export default function..."
+3 - Como adicionar Typescript - "yarn add typescript @types/react @types/node -D"
+4 - Como adicionar o SCSS - "mude o nome do css para module.scss - yarn add sass"
