@@ -2,3 +2,6 @@
 2 - Todos os arquivos dentro da paster page precisam de "export default function..."
 3 - Como adicionar Typescript - "yarn add typescript @types/react @types/node -D"
 4 - Como adicionar o SCSS - "mude o nome do css para module.scss - yarn add sass"
+5 - O module so fica disponivel para o component que o importou, caso queira toda a aplicação utilizando voce apenas coloca "ex: global.scss"
+6 - Css nao é importado dentro do document
+7 -

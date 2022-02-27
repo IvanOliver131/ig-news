@@ -1,9 +1,17 @@
 import styles from '../../styles/home.module.scss';
+import Head from 'next/head';
 
 export default function Home() {
   return (
-    <h1 className={styles.title}>
-      <span>Hello</span> World
-    </h1>
+    <>
+      {/* tudo que eu jogar dentro deste head aqui sera anexado no head la do document */}
+      <Head>
+        <title>ig.news</title>
+      </Head>
+
+      <h1>
+        Hello World
+      </h1>
+    </>
   )
 }
