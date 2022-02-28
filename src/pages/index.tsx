@@ -6,7 +6,7 @@ export default function Home() {
     <>
       {/* tudo que eu jogar dentro deste head aqui sera anexado no head la do document */}
       <Head>
-        <title>ig.news</title>
+        <title>inicio | ig.news</title>
       </Head>
 
       <h1>
