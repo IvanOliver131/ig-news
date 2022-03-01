@@ -8,13 +8,13 @@ import Head from 'next/head';
 import { SubscribeButton } from '../components/SubscribeButton';
 import { stripe } from '../services/stripe';
 
-// *** FORMAS DE POPULAR UMA PÁGINA ***//
+// *** FORMAS DE POPULAR UMA PÁGINA ****//
 
 // 1- Client-side
 // 2- Server-side
 // 3- Static Site Generation
 
-// ************************************//
+// *************************************//
 
 interface HomeProps {
   product: {
