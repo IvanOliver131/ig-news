@@ -4,6 +4,7 @@ import girlCodingImg from '../../public/images/avatar.svg';
 import styles from './home.module.scss';
 
 import Head from 'next/head';
+import { SubscribeButton } from '../components/SubscribeButton';
 
 export default function Home() {
   return (
@@ -21,8 +22,10 @@ export default function Home() {
             Get access to all publications <br />
             <span>for $9.98 month</span>
           </p>
-        </section>
 
+          <SubscribeButton />
+        </section>
+               
         <Image src={girlCodingImg} alt="Girl coding" />
       </main>
     </>
