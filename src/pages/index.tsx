@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import Image from 'next/image';
 import girlCodingImg from '../../public/images/avatar.svg';
 
@@ -7,6 +7,14 @@ import styles from './home.module.scss';
 import Head from 'next/head';
 import { SubscribeButton } from '../components/SubscribeButton';
 import { stripe } from '../services/stripe';
+
+// *** FORMAS DE POPULAR UMA PÁGINA ***//
+
+// 1- Client-side
+// 2- Server-side
+// 3- Static Site Generation
+
+// ************************************//
 
 interface HomeProps {
   product: {
@@ -41,7 +49,7 @@ export default function Home({ product }: HomeProps) {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetStaticProps = async () => {
   const price = await stripe.prices.retrieve('price_1KYJtlIFVJyNdgHHeH4jW3dC', {
     expand: ['product'] // Utiliza o 'expand' para pegar todos os dados do produto
   });
@@ -58,6 +66,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return {
     props: {
       product
-    }
+    },
+    revalidate: 60 * 60 * 24, // 24 hours
   }
 }
