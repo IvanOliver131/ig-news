@@ -4,4 +4,7 @@
 4 - Como adicionar o SCSS - "mude o nome do css para module.scss - yarn add sass"
 5 - O module so fica disponivel para o component que o importou, caso queira toda a aplicação utilizando voce apenas coloca "ex: global.scss"
 6 - Css nao é importado dentro do document
-7 -
+7 - API Routes só serve no NextJs
+8 - Os arquivos criados dentro de API viram rotas 
+9 - Na hora de instalar o NextAuth use isso antes - 'yarn config set ignore-engines true'
+10 - 
