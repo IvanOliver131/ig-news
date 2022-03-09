@@ -7,6 +7,7 @@ import styles from './styles.module.scss';
 export function SignInButton() {
   const { data: session } = useSession();
 
+  // Se existir a session apresenta o botao 1 senao o 2
   return session ? (
     <button 
       type="button"
