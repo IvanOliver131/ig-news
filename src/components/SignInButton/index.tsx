@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 export function SignInButton() {
   const { data: session } = useSession();
 
-  // Se existir a session apresenta o botao 1 senao utiliza o botao 2
+  // Se existir a session apresenta o button 1 senao utiliza o button 2
   return session ? (
     <button 
       type="button"
