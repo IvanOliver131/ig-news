@@ -1,7 +1,7 @@
 import Stripe from 'stripe';
 import { version } from '../../package.json';
 
-// * Config do stripe //
+// * Config do stripe * //
 export const stripe = new Stripe(
   process.env.STRIPE_API_KEY,
   {
