@@ -14,8 +14,12 @@ export default NextAuth({
       authorization: {params: { scope: 'read:user'}}
     }),
   ],
+  secret: process.env.SECRET_JWT,
+  session: {
+    strategy: "jwt",
+  },
   jwt: {
-   secret: process.env.SIGNIN_KEY,
+    secret: process.env.SINGIN_KEY
   },
   callbacks: {
     async signIn({ user }) {
@@ -24,10 +28,26 @@ export default NextAuth({
       try {
         // Query faunaDB
         await fauna.query(
-          q.Create(
-            q.Collection('users'),
-            { data: { email } }
-          )
+          q.If(
+            q.Not(
+              q.Exists(
+                q.Match(
+                  q.Index('user_by_email'),
+                  q.Casefold(user.email)                  
+                )
+              )
+            ),
+            q.Create(
+              q.Collection('users'),
+              { data: { email }}
+            ), 
+            q.Get(
+              q.Match(
+                q.Index('user_by_email'),
+                q.Casefold(user.email)                  
+              )
+            )
+          )         
         );
 
         return true;
