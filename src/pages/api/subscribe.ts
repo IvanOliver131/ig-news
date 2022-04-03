@@ -4,12 +4,12 @@ import { stripe } from "../../services/stripe";
 
 export default async function subscribe(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
-    // get session user
+    // Get session user
     const session = await getSession({ req });
 
     const stripeCustomer = await stripe.customers.create({
-      email: session.user.email,
-      // metadata
+      email: session.user?.email,
+      // Metadata
     })
 
     const stripeCheckoutSession = await stripe.checkout.sessions.create({
@@ -21,9 +21,9 @@ export default async function subscribe(req: NextApiRequest, res: NextApiRespons
       ],
       mode: 'subscription',
       allow_promotion_codes: true,
-      // utilizar variaveis de ambiente nas url's
-      success_url: 'http://localhost:3000/posts',
-      cancel_url: 'http://localhost:3000/'
+      // Utilizar variaveis de ambiente nas url's
+      success_url: process.env.STRIPE_SUCCESS_URL,
+      cancel_url: process.env.STRIPE_CANCEL_URL
     });
 
     return res.status(200).json({ sessionId: stripeCheckoutSession })

@@ -15,9 +15,10 @@ export default NextAuth({
     }),
   ],
   secret: process.env.SECRET_JWT,
-  session: {
-    strategy: "jwt",
-  },
+  // Session serve para definir como sera o sistema de login
+  // session: {
+  //   strategy: "jwt",
+  // },
   jwt: {
     secret: process.env.SINGIN_KEY
   },
