@@ -38,7 +38,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();
 
   // Quando for criar um custom type utilize o nome no 
-  // lugar desse 2 ----- usei o 2 porque não sabia exatamente o que iria usar
+  // lugar desse 2 --- usei o 2 porque não sabia exatamente o que iria usar
 
   const response = await prismic.query([
     Prismic.predicates.at('document.type', '2')
