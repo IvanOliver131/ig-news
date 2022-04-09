@@ -15,6 +15,14 @@
           "blocks": 1
         }
       }
+    },
+    "publications": {
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
     }
   }
 }

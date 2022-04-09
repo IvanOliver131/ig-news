@@ -1,0 +1,21 @@
+{
+  "id": "490cb883-41e4-4b0c-a9c5-81af0151cc89",
+  "uid": "itaque-minima-corporis",
+  "type": "publications",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Synthesize next-generation systems",
+        "spans": []
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Sint nisi voluptate ea velit labore eiusmod aliqua nostrud laboris in ex voluptate non nulla eu.",
+        "spans": []
+      }
+    ]
+  }
+}
