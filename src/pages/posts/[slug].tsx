@@ -16,7 +16,7 @@ interface PostProps {
   }
 }
 
-export default function Posts({ post }:PostProps) {
+export default function Posts({ post }: PostProps) {
   return (
     <>
       <Head>
@@ -42,7 +42,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
   const { slug } = params;
 
   // Verificar se o usuário está autenticado ou não
-  if (!session.activeSubscription) {
+  if (!session?.activeSubscription) {
     return {
       redirect: {
         destination: '/',
