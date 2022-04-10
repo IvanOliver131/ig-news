@@ -14,14 +14,14 @@ export default NextAuth({
       authorization: {params: { scope: 'read:user'}}
     }),
   ],
-  secret: process.env.SECRET_JWT,
-  // Session serve para definir como sera o sistema de login
-  // session: {
-  //   strategy: "jwt",
+  // secret: process.env.SECRET_JWT,
+  // // Session serve para definir como sera o sistema de login
+  // // session: {
+  // //   strategy: "jwt",
+  // // },
+  // jwt: {
+  //   secret: process.env.SINGIN_KEY
   // },
-  jwt: {
-    secret: process.env.SINGIN_KEY
-  },
   callbacks: {
     async session({ session }) {
       try {
