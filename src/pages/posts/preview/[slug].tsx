@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { GetStaticProps } from "next"
+import { GetStaticPaths, GetStaticProps } from "next"
 import { useSession } from "next-auth/react";
 import Head from "next/head";
 import Link from "next/link";
@@ -57,10 +57,15 @@ export default function PostPreview({ post }: PostPreviewProps) {
   )
 }
 
-export const getStaticPaths = () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   return {
+    // paths: [
+    //   { params: { slug: 'prisma-uma-das-melhores-coisa-que-ja-aconteceu-no' } }
+    // ], 
     paths: [],
     fallback: 'blocking'
+
+    // fallback pode receber: true, false or 'blocking'
   }
 }
 
