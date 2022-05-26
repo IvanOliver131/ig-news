@@ -7,4 +7,4 @@
 7 - API Routes só serve no NextJs
 8 - Os arquivos criados dentro de API viram rotas 
 9 - Na hora de instalar o NextAuth use isso antes - 'yarn config set ignore-engines true'
-10 - 
+10 - ANOTAÇÕES JEST - use a versão testing-library/react 12.1.2
