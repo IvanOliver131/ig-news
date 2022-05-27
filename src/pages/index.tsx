@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import { GetStaticProps } from 'next';
-import Image from 'next/image';
-import girlCodingImg from '../../public/images/avatar.svg';
+// import Image from 'next/image';
+// import girlCodingImg from '../../public/images/avatar.svg';
 
 import styles from './home.module.scss';
 
@@ -19,7 +20,7 @@ import { stripe } from '../services/stripe';
 interface HomeProps {
   product: {
     priceId: string;
-    amount: number;
+    amount: string;
   }
 }
 
@@ -40,10 +41,11 @@ export default function Home({ product }: HomeProps) {
             <span>for {product.amount} month</span>
           </p>
 
-          <SubscribeButton priceId={product.priceId}/>
+          <SubscribeButton />
         </section>
                
-        <Image src={girlCodingImg} alt="Girl coding" />
+        {/* <Image src={girlCodingImg} alt="Girl coding" /> */}
+        <img src="../../public/images/avatar.svg" alt="Girl coding" />
       </main>
     </>
   )
