@@ -45,7 +45,7 @@ describe('Posts Page', () => {
     )
   });
 
-  // Teste com erro
+  // Teste com erro - encontrar solução da função UID
   // it('loads initial data', async () => {
   //   const getSessionMocket = mocked(getSession);
   //   const getPrismicClientMocked = mocked(getPrismicClient);
