@@ -48,7 +48,12 @@ export default function Home({ product }: HomeProps) {
         </section>
 
         {/* <Image src={girlCodingImg} alt="Girl coding" /> */}
-        <Image src="../../public/images/avatar.svg" alt="Girl coding" />
+        <Image
+          src="/images/avatar.svg"
+          alt="Girl coding"
+          width={800}
+          height={800}
+        />
       </main>
     </>
   );

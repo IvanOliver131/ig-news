@@ -6,14 +6,14 @@ import { ActiveLink } from "../ActiveLink";
 import Image from "next/image";
 
 // import Image from 'next/image';
-// import logoImg from '../../../public/images/logo.svg';
+import logoImg from "../../../public/images/logo.svg";
 
 export function Header() {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
         {/* <Image src={logoImg} alt="ig.news" /> */}
-        <Image src="../../../public/images/logo.svg" alt="ig-news" />
+        <Image src="/images/logo.svg" alt="ig-news" width={100} height={100} />
         <nav>
           {/* os prefetchs eram apenas "prefetch" */}
           <ActiveLink activeClassName={styles.active} href="/" prefetch={false}>
